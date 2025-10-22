@@ -1,0 +1,42 @@
+* {
+  font-family: Consolas;
+}
+
+nav {
+  padding: 20px;
+  background-color: cadetblue;
+  color: white;
+  font-size: larger;
+}
+
+.page {
+  padding: 25px;
+}
+
+.home {
+  background-image: url('./assets/home.png');
+}
+
+.contact {
+  background-image: url('./assets/contact.png');
+}
+
+.etcetera {
+  background-image: url('./assets/etcetera.png');
+}
+
+.works {
+  background-image: url('./assets/works.png');
+}
+
+.services {
+  background-image: url('./assets/services.png');
+}
+
+.notfound {
+  background-image: url('./assets/notfound.png');
+}
+
+mark {
+  background-color: white;
+}

@@ -1,0 +1,18 @@
+#root {
+  padding: 10px;
+}
+
+span {
+  font-family: verdana;
+}
+
+.theme {
+  width: 70px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+.theme:hover {
+  border-color: blue;
+}

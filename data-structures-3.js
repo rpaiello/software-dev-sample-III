@@ -199,3 +199,37 @@ function compressedCommonality(s1, s2) {
 console.log(compressedCommonality("HELLO WORLD!", "WORLD!dfsdfs34")) //exp: 6
 console.log(compressedCommonality("bbaba", "abba")) //exp: 3
 console.log(compressedCommonality("argh", "aarargargh")) //exp: 4
+
+let thisObject = {
+    date : new Date().getTime(),
+    parity : {
+        1 : false,
+    }
+};
+
+let thatObject = thisObject;
+thatObject.parity[1] = true;
+console.log(thisObject, thatObject);
+thatObject = structuredClone(thisObject);
+thatObject.parity[1] = "Secret third thing";
+console.log(thisObject, thatObject);
+
+console.log(Object.getOwnPropertyNames(thatObject));
+
+let studentProfile = {
+    name : "Robert",
+    studentId : 413,
+    tempKey : "qwerty",
+}
+
+Object.defineProperty(studentProfile, studentId, {
+    writable : false,
+    configurable: false,
+})
+
+Object.defineProperty(studentProfile, tempKey, {
+    enumerable: false,
+})
+
+Object.freeze(studentProfile);
+//Only "studentId" is now truly immutable as it cannot be written or changed even if the object were to be unfrozen.

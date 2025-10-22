@@ -1,0 +1,13 @@
+.wordcard {
+  box-shadow: 5px 5px 8px lightslategrey;
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  margin-bottom: 2em;
+  width: 250px;
+  background-color: wheat;
+}
+
+.c-reverse {
+    visibility: hidden;
+}
