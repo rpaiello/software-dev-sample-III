@@ -1,26 +1,29 @@
 import { useState } from 'react'
 import './App.css'
-import WordCard from './components/wordcard/WordCard'
 import CreateCards from './components/wordcard/CreateCards';
+import CardContainer from './components/wordcard/CardContainer';
 
 function App() {
-  const [words, setWords] = useState([
-    {key: "1", obverse: "Translation", reverse: "Üvbersetzung"},
-    {key: "2", obverse: "Egg", reverse:"Ei"},
-    {key: "3", obverse: "Paper", reverse:"Papier"},
-    {key: "4", obverse: "Square", reverse:"Platz"}
-  ]);
+  const [words, setWords] = useState([]);
+
+  const addWord = (obverse, reverse) => {
+    const newWords = [...words, {obverse, reverse}]
+    setWords(newWords);
+  }
+
+  const deleteWord = (obverse) => {
+    const wordsMinusOne = words.filter(word => word.obverse !== obverse);
+    setWords(wordsMinusOne);
+  }
 
   return (
     <div className="app">
-      <section className='cardform'>
-        <CreateCards />
-      </section>
       <h2>Dictionary App</h2>
       <hr />
-      <main className='cardcontainer'>
-        {words.map(word => <WordCard obverse={word.obverse} reverse={word.reverse} key={`${word.obverse}-${word.reverse}`} />)}
-      </main>
+      <section className='cardform'>
+        <CreateCards addWord={addWord}/>
+        <CardContainer deleteWord={deleteWord} words={words}/>
+      </section>
     </div>
   )
 }

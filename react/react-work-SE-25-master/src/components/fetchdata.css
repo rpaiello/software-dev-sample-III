@@ -1,0 +1,19 @@
+th {
+    background-color: lightgray;
+    border-right: 2px solid lightgray;
+}
+
+tr:nth-child(odd) {
+    background-color: lightgray;
+}
+tr:nth-child(odd)>td {
+    border-right: 2px solid darkgray
+}
+
+table {
+    outline: 2px solid lightgray;
+    border-collapse: collapse;
+}
+td {
+    border-right: 2px solid lightgray;
+}

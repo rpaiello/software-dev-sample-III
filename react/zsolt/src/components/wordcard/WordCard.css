@@ -11,3 +11,14 @@
 .c-reverse {
     visibility: hidden;
 }
+
+.del {
+  font-size: 10px;
+  color: maroon;
+  padding: 2px;
+}
+
+.del:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}

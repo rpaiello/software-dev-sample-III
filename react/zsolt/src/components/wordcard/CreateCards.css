@@ -1,3 +1,12 @@
 .flex {
     display: flex;
 }
+
+.formbox {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+input[type="submit"] {
+    width: 120px;
+}

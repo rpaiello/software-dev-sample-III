@@ -1,9 +1,3 @@
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-.cardcontainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
