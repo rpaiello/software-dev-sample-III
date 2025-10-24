@@ -1,15 +1,19 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import CreateCards from './components/wordcard/CreateCards';
 import CardContainer from './components/wordcard/CardContainer';
 
 function App() {
   const [words, setWords] = useState([]);
-
   const addWord = (obverse, reverse) => {
     const newWords = [...words, {obverse, reverse}]
     setWords(newWords);
   }
+
+  useEffect(() => {
+        fetch('../../../public/constants/defaultcards.json').then(response => response.json()).then(payload => setWords(payload));
+        console.log('effect used!');
+    } ,[]);
 
   const deleteWord = (obverse) => {
     const wordsMinusOne = words.filter(word => word.obverse !== obverse);

@@ -1,6 +1,6 @@
 import WordCard from "./WordCard";
 import './CreateCards.css'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CardContainer from "./CardContainer";
 
 function CreateCards({addWord}) {
